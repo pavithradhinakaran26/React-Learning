@@ -7,6 +7,9 @@ import './App.css';
 import Login from '../src/Components/login';
 import Form from '../src/Components/Form';
 import Loginpage from '../src/Components/Loginpage';
+import Handling from './Components/Handling';
+import Conditional from './Components/Conditional';
+
 
 
 
@@ -19,12 +22,19 @@ function App() {
       <Route path='/login' element={<Login/>}/>
       <Route path='/form' element={<Form/>}/>
       <Route path='/loginpage' element={<Loginpage/>}/>
+      <Route path='/handling' element={<Handling/>}/>
+      <Route path='/conditional' element={<Conditional/>}/>
+     
+    
+      
+      
       
     
     
     </Routes>
     </BrowserRouter>
     </>
+    
   );
 }
 

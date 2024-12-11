@@ -9,8 +9,9 @@ function Loginpage() {
       <h2 className='name'>{name}</h2>
       <button className='button' onClick={()=> createName('Hi')}>Hi state</button>
     </div>
+    
   )
 }
 
-export default Loginpage;
+export default Loginpage; 
 
