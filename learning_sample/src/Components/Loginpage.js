@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 function Loginpage() {
      
-  const[name,createName] = useState("Hello World")
+  const[name,createName] = useState(" hello world")
   console.log(name)
   return (
     <div>

@@ -9,6 +9,8 @@ import Form from '../src/Components/Form';
 import Loginpage from '../src/Components/Loginpage';
 import Handling from './Components/Handling';
 import Conditional from './Components/Conditional';
+import Memo from '../src/Components/Memo';
+import List from '../src/Components/List';
 
 
 
@@ -24,6 +26,9 @@ function App() {
       <Route path='/loginpage' element={<Loginpage/>}/>
       <Route path='/handling' element={<Handling/>}/>
       <Route path='/conditional' element={<Conditional/>}/>
+      <Route path='/memo' element={<Memo/>}/>
+      <Route path='/list' element={<List/>}/>
+       
      
     
       
