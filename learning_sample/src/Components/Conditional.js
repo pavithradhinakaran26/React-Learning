@@ -4,10 +4,10 @@ function Conditional  ()  {
     const admin= true
     let result = null 
     if(admin === "html"){ 
-        result= <h1>you are a admin user</h1>
+        result= <h1>you are of admin user</h1>
     }
     else{
-       result=<h1 className='you'>pavithra</h1>
+       result=<h1 className='you'>computer</h1>
     }
     
   return ( 
