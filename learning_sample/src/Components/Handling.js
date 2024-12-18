@@ -8,6 +8,7 @@ function Handling() {
     <button onClick={Handling}>Click Me</button>
     <input type='text' onChange={(e) =>{
       console.log(e.target.value)
+      
     }}></input>
     
     </div>
