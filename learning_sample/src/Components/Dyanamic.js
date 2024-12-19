@@ -10,4 +10,4 @@ function Dyanamic() {
   )
 }
 
-export default Dyanamic
+export default Dyanamic 

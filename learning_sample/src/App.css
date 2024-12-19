@@ -65,6 +65,18 @@
  .fruit{
   text-align: center;
 }
+.login{
+  text-align: center;
+}
+.container{
+  text-align: center;
+}
+
+/* .container{
+  background-color: #04AA6D;
+  height: 100px;
+
+} */
  /* .dots{
   text-align: center;
 }   */
