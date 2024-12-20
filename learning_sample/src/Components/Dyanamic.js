@@ -5,7 +5,7 @@ function Dyanamic() {
    const {userName} = useParams()
   return (
     <div>
-      <h1>Pavithra {userName}</h1>
+      <h1>Pavithra {userName}</h1> 
     </div>
   )
 }

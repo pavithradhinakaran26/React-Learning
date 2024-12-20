@@ -23,6 +23,8 @@ import Home from './Components/Home';
 import About from './Components/About';
 import Mail from './Components/Mail'; 
 import Mainmemo from './Components/Mainmemo';
+import Props from './Components/Props';
+
 
 
 
@@ -33,7 +35,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
-    
+    {/* <Rounter/> */}
     <Routes>
       
       <Route path='/login' element={<Login/>}></Route>
@@ -49,6 +51,7 @@ function App() {
       <Route path='/about' element={<About/>}></Route>
       <Route path='/mail' element={<Mail/>}></Route>
       <Route path='/mainmemo' element={<Mainmemo/>}></Route>
+      <Route path='/props' element={<Props/>}></Route>
      
       
     

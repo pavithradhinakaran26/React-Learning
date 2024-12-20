@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import './Forms.css';
 
 
 
@@ -8,11 +8,11 @@ import React, { useState } from 'react'
 
 
 function Form() {
-  const[name,setname]= useState("");
+  const[name,setname]= useState(""); 
   const[headingText,setheading] = useState()
   function handlechange(event) {
   
-   setname(event.target.value)
+   setname(event.target.value) 
    
   
   }
