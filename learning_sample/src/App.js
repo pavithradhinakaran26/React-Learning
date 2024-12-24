@@ -24,6 +24,8 @@ import About from './Components/About';
 import Mail from './Components/Mail'; 
 import Mainmemo from './Components/Mainmemo';
 import Props from './Components/Props';
+import Login2 from './Components/Login2';
+import Useeffect from './Components/Useeffect';
 
 
 
@@ -52,6 +54,8 @@ function App() {
       <Route path='/mail' element={<Mail/>}></Route>
       <Route path='/mainmemo' element={<Mainmemo/>}></Route>
       <Route path='/props' element={<Props/>}></Route>
+      <Route path='/login2' element={<Login2/>}></Route>
+      <Route path='/useeffect' element={<Useeffect/>}></Route>
      
       
     
