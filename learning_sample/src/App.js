@@ -26,6 +26,7 @@ import Mainmemo from './Components/Mainmemo';
 import Props from './Components/Props';
 import Login2 from './Components/Login2';
 import Useeffect from './Components/Useeffect';
+import Context from './Components/Context';
 
 
 
@@ -40,7 +41,7 @@ function App() {
     {/* <Rounter/> */}
     <Routes>
       
-      <Route path='/login' element={<Login/>}></Route>
+      <Route path='/login' element={<Login/>}></Route> 
       <Route path='/form' element={<Form/>}></Route>
       <Route path='/loginpage' element={<Loginpage/>}></Route>
       <Route path='/handling' element={<Handling/>}></Route>
@@ -55,7 +56,9 @@ function App() {
       <Route path='/mainmemo' element={<Mainmemo/>}></Route>
       <Route path='/props' element={<Props/>}></Route>
       <Route path='/login2' element={<Login2/>}></Route>
-      <Route path='/useeffect' element={<Useeffect/>}></Route>
+      <Route path='/useeffect' element={<Useeffect/>}></Route> 
+      <Route path='/context' element={<Context/>}></Route>
+
      
       
     
