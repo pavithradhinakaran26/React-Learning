@@ -20,13 +20,13 @@ import List from '../src/Components/List';
 import Rounter from '../src/Components/Rounter';
 import Dyanamic from './Components/Dyanamic';
 import Home from './Components/Home';
-import About from './Components/About';
-import Mail from './Components/Mail'; 
+import About from './Components/About'; 
 import Mainmemo from './Components/Mainmemo';
 import Props from './Components/Props';
-import Login2 from './Components/Login2';
-import Useeffect from './Components/Useeffect';
+import Login2 from './Hooks/Login2';
+import Useeffect from './Hooks/Useeffect';
 import Context from './Components/Context';
+import Register from './Hooks/Register';
 
 
 
@@ -52,12 +52,12 @@ function App() {
       <Route path='/dynamic/:userName' element={<Dyanamic/>}></Route>
       <Route path='/home' element={<Home/>}></Route>
       <Route path='/about' element={<About/>}></Route>
-      <Route path='/mail' element={<Mail/>}></Route>
       <Route path='/mainmemo' element={<Mainmemo/>}></Route>
       <Route path='/props' element={<Props/>}></Route>
       <Route path='/login2' element={<Login2/>}></Route>
       <Route path='/useeffect' element={<Useeffect/>}></Route> 
       <Route path='/context' element={<Context/>}></Route>
+      <Route path='/register' element={<Register/>}></Route>
 
      
       

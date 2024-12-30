@@ -60,7 +60,7 @@ function Login2() {
         <option value="" disabled selected>Select your option</option> 
          <option value="orthanadu">orthanadu</option>
          <option value="Thanjavur">Thanjavur</option>
-         <option value="Pulavankadu">Pulavankadu</option>
+         <option value="Pulavankadu">Pulavankadu</option> 
          <option value="Kakkarai">Kakkarai</option> 
      </select>
      
