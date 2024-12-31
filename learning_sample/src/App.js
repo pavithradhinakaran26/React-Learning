@@ -27,6 +27,8 @@ import Login2 from './Hooks/Login2';
 import Useeffect from './Hooks/Useeffect';
 import Context from './Components/Context';
 import Register from './Hooks/Register';
+import Data from './Hooks/Data';
+import Reg from './Hooks/Reg';
 
 
 
@@ -58,6 +60,8 @@ function App() {
       <Route path='/useeffect' element={<Useeffect/>}></Route> 
       <Route path='/context' element={<Context/>}></Route>
       <Route path='/register' element={<Register/>}></Route>
+      <Route path='/data' element={<Data/>}></Route>
+      <Route path='/reg' element={<Reg/>}></Route>
 
      
       
