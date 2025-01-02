@@ -54,7 +54,7 @@ function Data() {
           </li>
         ))}
       </ul>
-      <button onClick={() => navigate(-1)}>Go Back</button>
+      <button  className='data' onClick={() => navigate(-1)}>Go Back</button>
     </div>
   );
 }

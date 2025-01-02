@@ -140,3 +140,7 @@ select option:first-child {
   font-size: 25px;
   color: red; 
 }
+.data{
+  background-color: gray; 
+  width: 90px;
+}

@@ -8,7 +8,9 @@ function Loginpage() {
     <div>
       <h2 className='name'>{name}</h2>
       <button className='button' onClick={()=> createName('Hi')}>Hi state</button>
+      s
     </div>
+
     
   )
 }

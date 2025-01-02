@@ -1,12 +1,5 @@
 import React, { useState } from 'react'
 import './Forms.css';
-
-
-
-
-
-
-
 function Form() {
   const[name,setname]= useState(""); 
   const[headingText,setheading] = useState()

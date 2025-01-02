@@ -29,6 +29,7 @@ import Context from './Components/Context';
 import Register from './Hooks/Register';
 import Data from './Hooks/Data';
 import Reg from './Hooks/Reg';
+import Formik from './Hooks/Formik';
 
 
 
@@ -62,29 +63,8 @@ function App() {
       <Route path='/register' element={<Register/>}></Route>
       <Route path='/data' element={<Data/>}></Route>
       <Route path='/reg' element={<Reg/>}></Route>
-
-     
-      
-    
-
-
-      
-      
-     
-
-
-      
-
-    
-       
-     
-    
-      
-      
-      
-    
-    
-    </Routes>
+      <Route path='/Formik' element={<Formik/>}></Route>
+</Routes>
     </BrowserRouter>
     </>
     

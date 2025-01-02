@@ -73,9 +73,9 @@
     background: #0056b3;
   }
   
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .input-row {
       flex-direction: column;
     }
-  }
+  } */
   

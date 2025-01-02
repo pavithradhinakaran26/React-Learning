@@ -11,7 +11,7 @@ function Reg() {
       try {
         const response = await fetch('https://672f26e4229a881691f1fdd9.mockapi.io/Loginforms/Register');
         if (!response.ok) {
-          throw new Error('Failed to fetch data');
+          throw new Error('Failed to fetch data'); 
         }
         const result = await response.json();
         setData(result);
