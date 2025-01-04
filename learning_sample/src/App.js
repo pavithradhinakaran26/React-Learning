@@ -64,6 +64,7 @@ function App() {
       <Route path='/data' element={<Data/>}></Route>
       <Route path='/reg' element={<Reg/>}></Route>
       <Route path='/Formik' element={<Formik/>}></Route>
+      
 </Routes>
     </BrowserRouter>
     </>

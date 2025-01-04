@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import './Register.css';
 import { useNavigate } from 'react-router-dom';
-
+import register from './register.webp'; 
 function Register() {
   const navigate = useNavigate();
 
@@ -96,11 +96,14 @@ function Register() {
   };
 
   return (
+    <div className="reg-container1">
+      <img src={register} alt="System" className="img"/> 
     <div className="forms-register">
+      
       <h1>Register Forms</h1>
-      <form className="input-forms" onSubmit={handleSubmit}>
+      <form className="input-name" onSubmit={handleSubmit}>
         <div className="input-row">
-          <div className="form-group">
+          <div className="form-name">
             <label htmlFor="username">Username:</label>
             <input
               type="text"
@@ -112,7 +115,7 @@ function Register() {
             />
             {errors.username && <p className="error">{errors.username}</p>}
           </div>
-          <div className="form-group">
+          <div className="form-name">
             <label htmlFor="email">Email:</label>
             <input
               type="email"
@@ -127,7 +130,7 @@ function Register() {
         </div>
 
         <div className="input-row">
-          <div className="form-group">
+          <div className="form-name">
             <label htmlFor="phone">Phone Number:</label>
             <input
               type="tel"
@@ -139,7 +142,7 @@ function Register() {
             />
             {errors.phone && <p className="error">{errors.phone}</p>}
           </div>
-          <div className="form-group">
+          <div className="form-name">
             <label htmlFor="password">Password:</label>
             <input
               type="password"
@@ -154,7 +157,7 @@ function Register() {
         </div>
 
         <div className="input-row">
-          <div className="form-group">
+          <div className="form-name">
             <label htmlFor="address">Address:</label>
             <input
               type="text"
@@ -166,7 +169,7 @@ function Register() {
             />
             {errors.address && <p className="error">{errors.address}</p>}  
           </div>
-          <div className="form-group">
+          <div className="form-name">
             <label htmlFor="city">City:</label>
             <input
               type="text"
@@ -180,7 +183,7 @@ function Register() {
           </div>
         </div>
 
-        <div className="form-group">
+        <div className="form-select">
           <label htmlFor="gender">Gender:</label>
           <select
             id="gender"
@@ -195,7 +198,7 @@ function Register() {
           {errors.gender && <p className="error">{errors.gender}</p>}
         </div>
 
-        <div className="form-group">
+        <div className="form-name">
           <label htmlFor="birthdate">Date of Birth:</label>
           <input
             type="date"
@@ -212,6 +215,7 @@ function Register() {
         </div>
         <p>Already have an account? <a href="#" onClick={() => navigate('/Useeffect')}>Sign in</a>.</p>
       </form>
+    </div>
     </div>
   );
 }
