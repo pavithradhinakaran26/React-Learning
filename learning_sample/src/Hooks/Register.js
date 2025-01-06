@@ -88,11 +88,15 @@ function Register() {
       const data = await response.json();
       console.log('Success:', data);
       alert('Registration successful!');
-      navigate('/Reg'); 
+      navigate('/Material'); 
     } catch (error) {
       console.error('Error:', error);
       alert('Registration failed. Please try again.');
     }
+
+
+   
+   
   };
 
   return (
@@ -167,7 +171,7 @@ function Register() {
               value={formData.address}
               onChange={handleChange}
             />
-            {errors.address && <p className="error">{errors.address}</p>}  
+            {errors.address && <p className="error">{errors.address}</p>} 
           </div>
           <div className="form-name">
             <label htmlFor="city">City:</label>
@@ -177,7 +181,7 @@ function Register() {
               name="city"
               placeholder="Enter your city"
               value={formData.city}
-              onChange={handleChange}
+              onChange={handleChange} 
             />
             {errors.city && <p className="error">{errors.city}</p>}
           </div>
@@ -210,10 +214,10 @@ function Register() {
           {errors.birthdate && <p className="error">{errors.birthdate}</p>}
         </div>
 
-        <div className="submit-btn">
+        <div className="submit-btn"> 
           <button type="submit">Submit</button>
         </div>
-        <p>Already have an account? <a href="#" onClick={() => navigate('/Useeffect')}>Sign in</a>.</p>
+        <p>Already have an account?  <a href="#" onClick={() => navigate('/Useeffect')}>Sign in</a>.</p>
       </form>
     </div>
     </div>
@@ -221,3 +225,13 @@ function Register() {
 }
 
 export default Register;
+
+
+
+
+
+
+
+
+
+

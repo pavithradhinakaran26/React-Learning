@@ -30,6 +30,8 @@ import Register from './Hooks/Register';
 import Data from './Hooks/Data';
 import Reg from './Hooks/Reg';
 import Formik from './Hooks/Formik';
+import Table from './Hooks/Table';
+import Material from './Hooks/Material';
 
 
 
@@ -64,6 +66,8 @@ function App() {
       <Route path='/data' element={<Data/>}></Route>
       <Route path='/reg' element={<Reg/>}></Route>
       <Route path='/Formik' element={<Formik/>}></Route>
+      {/* <Route path='/table' element={<Table/>}></Route> */}
+        <Route path='/material' element={<Material/>}></Route>
       
 </Routes>
     </BrowserRouter>

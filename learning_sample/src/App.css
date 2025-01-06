@@ -144,3 +144,65 @@ select option:first-child {
   background-color: gray; 
   width: 90px;
 }
+
+
+
+/* .table-container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+
+.table-header {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.styled-table th, .styled-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.styled-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.edit-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+
+ */
