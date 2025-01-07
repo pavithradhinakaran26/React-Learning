@@ -81,11 +81,17 @@
       flex-direction: column;
     }
   } */
-   .reg-container1 {
+
+
+
+
+
+    .reg-container1 {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: serif;
   }
   
   .img {
@@ -97,14 +103,14 @@
   .forms-register {
     width: 400px;
     height: 70%;
-    background-color: #f5f5f5;
-    padding: 20px;
+    background-color:aliceblue;
+    padding: 50px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 20px; 
   }
 
-  .forms-select{
+  select{
     width: 105%;
     padding: 12px;
     font-size: 16px;
@@ -115,11 +121,15 @@
     transition: all 0.3s ease;
     color: black;
     font-family: cursive;
+    margin-top: 27px;
   }
+
+
   
   .forms-register h1 {
     text-align: center;
     margin-bottom: 20px;
+    margin-top: -13px;
   }
   
   .input-forms {
@@ -154,7 +164,7 @@
   .submit-btn {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 67px;
   }
   
   .submit-btn button {
@@ -186,7 +196,63 @@
   p a:hover {
     text-decoration: underline;
   }
+
+ 
   
+.main{
+  display: flex;
+  
+}
+
+.form-error {
+ padding-left: 25px;
+ 
+}
+
+.form-error label {
+  font-size: 16px;
+  color: #333;
+  margin-left: 30px;
+ 
+  font-weight: bold;
+}
+
+.form-error input[type="date"] {
+  width: 100%;
+  padding:13px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+ 
+  height:20px;
+}
+
+.form-error input[type="date"]:focus {
+  outline: none;
+  border-color: #0056b3;
+  
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.list{
+  margin-right: 70px;
+  margin-top: 30px;
+} 
+.gender{
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
 
 
 

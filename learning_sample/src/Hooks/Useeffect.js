@@ -265,12 +265,14 @@ function Useeffect() {
     },
   });
 
+
+ 
   const Register = () => {
     navigate('/Register');
   };
 
   return (
-    <div className="image-container">
+    <div className="image-container1">
       <img src={images2} alt="System" className="image" />
       <div className="container1">
         <h1 className="form-title">Login Form</h1>

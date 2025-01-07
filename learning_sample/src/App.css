@@ -98,18 +98,7 @@
   margin-right: 300px;
   
 }
-select {
-  width: 105%;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  background-color: #f4f4f4;
-  outline: none;
-  transition: all 0.3s ease;
-  color: black;
-  font-family: cursive;
-}
+
 select:focus {
   border-color: #007BFF;
   background-color: #e6f0ff;

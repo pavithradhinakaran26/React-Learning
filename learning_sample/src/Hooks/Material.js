@@ -28,7 +28,7 @@ function Material() {
   }, []); 
 
   const handleEdit = (user) => {
-    navigate('/register', { state: { user: user } }); 
+    navigate('/register', { state: { user: user } });
   };
   const handleDelete = async (id) => {
     try {
@@ -41,12 +41,14 @@ function Material() {
       }
 
       setSubmitted(submitted.filter((user) => user.id !== id)); 
-      alert('User deleted successfully!');
+      // alert('User deleted successfully!');
     } catch (error) {
-      console.error('Error deleting user:', error);
+      console.error('Error deleting user:', error); 
       alert('Failed to delete user.');
     }
-  };
+};
+
+
 
   return (
     <TableContainer component={Paper} sx={{ maxWidth: '80%', margin: 'auto', marginTop: '20px' }}>
@@ -94,7 +96,7 @@ function Material() {
   );
 }
 
-export default Material;
+export default Material; 
 
 
 
