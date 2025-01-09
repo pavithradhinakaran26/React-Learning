@@ -25,13 +25,21 @@ import Mainmemo from './Components/Mainmemo';
 import Props from './Components/Props';
 import Login2 from './Hooks/Login2';
 import Useeffect from './Hooks/Useeffect';
-import Context from './Components/Context';
+
 import Register from './Hooks/Register';
 import Data from './Hooks/Data';
 import Reg from './Hooks/Reg';
 import Formik from './Hooks/Formik';
-import Table from './Hooks/Table';
+
 import Material from './Hooks/Material';
+import Context from './Components/Context';
+import Container from './Components/Container';
+import Usecontext from './Components/Usecontext';
+
+
+
+
+
 
 
 
@@ -68,6 +76,9 @@ function App() {
       <Route path='/Formik' element={<Formik/>}></Route>
       {/* <Route path='/table' element={<Table/>}></Route> */}
         <Route path='/material' element={<Material/>}></Route>
+        <Route path='/Container' element={<Container/>}></Route>
+        <Route path='/usecontext' element={<Usecontext/>}></Route>
+     
       
 </Routes>
     </BrowserRouter>
