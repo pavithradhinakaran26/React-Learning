@@ -10,3 +10,19 @@ function Firstmemo1({val1}) {
 }
 
 export default memo(Firstmemo1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
