@@ -4,7 +4,8 @@ import React from 'react'
 function Variable() {
   return (
     <div>
-      <h1 className='head'>Heading</h1>
+      <h1 className='head'>pavithra</h1>
+      
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Handling() {
-     console.log("mithra");
+     console.log("pavithra");
     
   return (
     <div>

@@ -37,6 +37,10 @@ import Container from './Components/Container';
 import Usecontext from './Components/Usecontext';
 import UseRef from './Components/UseRef';
 import Reducer from './Components/Reducer';
+import City from './Hooks/City';
+import Country from './Hooks/Country';
+import Display from './Hooks/Display';
+import State from './Hooks/State';
 
 
 
@@ -82,6 +86,10 @@ function App() {
         <Route path='/usecontext' element={<Usecontext/>}></Route>
         <Route path='/useref' element={<UseRef/>}></Route>
         <Route path='/reducer' element={<Reducer/>}></Route>
+        <Route path='/city' element={<City/>}></Route>
+        <Route path='/country' element={<Country/>}></Route>
+        <Route path='/display' element={<Display/>}></Route>
+        <Route path='/state' element={<State/>}></Route>
       
 </Routes>
     </BrowserRouter>
