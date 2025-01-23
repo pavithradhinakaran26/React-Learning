@@ -1,11 +1,11 @@
-.head{
+ /* .head{
   background-color: aqua;
   text-align: center;
   color: red;
   font-size: 40px;
 }
 .vino{
-  /* background-color: antiquewhite; */
+
   text-align: center;
    font-size: 30px;
 }
@@ -93,7 +93,7 @@
   font-weight: 600;
   color:black;
   margin-bottom: 8px;
-  /* margin-top: 40px; */
+  margin-top: 40px;
   display: block;
   margin-right: 300px;
   
@@ -132,7 +132,7 @@ select option:first-child {
 .data{
   background-color: gray; 
   width: 90px;
-}
+}  */
 
 
 
@@ -195,3 +195,73 @@ select option:first-child {
 
 
  */
+
+
+
+
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 37px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  height: 515px;
+}
+
+
+.container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+.group {
+  margin-bottom: 15px;
+ width:97%;
+}
+
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+button:hover {
+  background-color: #45a049;
+  border-radius: 1px solid;
+}
+
+
+
+

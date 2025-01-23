@@ -41,6 +41,7 @@ import City from './Hooks/City';
 import Country from './Hooks/Country';
 import Display from './Hooks/Display';
 import State from './Hooks/State';
+import Registerforms from './Hooks/Registerforms';
 
 
 
@@ -90,7 +91,7 @@ function App() {
         <Route path='/country' element={<Country/>}></Route>
         <Route path='/display' element={<Display/>}></Route>
         <Route path='/state' element={<State/>}></Route>
-      
+        <Route path='/registerforms' element={<Registerforms/>}></Route>
 </Routes>
     </BrowserRouter>
     </>

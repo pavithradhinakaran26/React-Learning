@@ -1,26 +1,40 @@
-// import React from 'react'
-// import Display from './Display'
-
-// function Country() {
-//   return (
-//     <div>
-//       <Display/>
-//     </div>
-//   )
-// }
-
-// export default Country
 
 
-import React from 'react';
 
-function Country({ city }) {
+import React, { useState } from 'react';
+
+function Country() {
+  const[City,setcity]=useState('')
+
+  const handlecitychange = (e) =>{
+    setcity(e.target.value);
+  }
   return (
+  
+
     <div>
-      {city ? <h2>Selected City: {city}</h2> : <h2>Please select a city.</h2>}
-    </div>
+      {/* <label>City:</label>
+        <select id='city'  value={City} onChange={handlecitychange}>
+          <option value="" disabled>Select Country</option>
+          <option value="Thanjavur">Thanjavur</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Pulavankadu">Pulavankadu</option>
+          <option value="Pudhur">Pudhur</option>
+        </select> */}
+    </div> 
   );
 }
 
 export default Country;
+
+
+
+
+
+
+
+
+
+
+
 

@@ -6,9 +6,6 @@ import { useNavigate } from 'react-router-dom';
 function Material() {
   const [submitted, setSubmitted] = useState([]);
   const navigate = useNavigate();
-
-  
-
   
   useEffect(() => {
     const fetchData = async () => {

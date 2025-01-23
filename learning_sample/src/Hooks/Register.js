@@ -90,7 +90,7 @@ function Register() {
               )}
             </div>
             <div className="form-name">
-              <label htmlFor="email">Email:</label>
+              <label htmlFor="email">Email:</label> 
               <input
                 type="email"
                 id="email"
@@ -167,7 +167,7 @@ function Register() {
                 onBlur={formik.handleBlur}
               />
               {formik.touched.city && formik.errors.city && (
-                <p className="error">{formik.errors.city}</p>
+                <p className="error">{formik.errors.city}</p>  
               )}
             </div>
           </div>
@@ -211,7 +211,7 @@ function Register() {
             <button type="submit">{userToEdit ? 'Update' : 'Register'}</button>
           </div>
 
-          <p>Already have an account? <a href="#" onClick={() => navigate('/Useeffect')}>Sign in</a>.</p>
+          <p>Already have an account?<a href="#" onClick={() => navigate('/Useeffect')}>Sign in</a>.</p>
         </form>
       </div>
     </div>
