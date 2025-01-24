@@ -39,9 +39,11 @@ import UseRef from './Components/UseRef';
 import Reducer from './Components/Reducer';
 import City from './Hooks/City';
 import Country from './Hooks/Country';
-import Display from './Hooks/Display';
+
 import State from './Hooks/State';
 import Registerforms from './Hooks/Registerforms';
+import Citycontext from './Hooks/Citycontext';
+
 
 
 
@@ -89,9 +91,11 @@ function App() {
         <Route path='/reducer' element={<Reducer/>}></Route>
         <Route path='/city' element={<City/>}></Route>
         <Route path='/country' element={<Country/>}></Route>
-        <Route path='/display' element={<Display/>}></Route>
+        
         <Route path='/state' element={<State/>}></Route>
         <Route path='/registerforms' element={<Registerforms/>}></Route>
+        <Route path='/citycontext' element={<Citycontext/>}></Route>
+        
 </Routes>
     </BrowserRouter>
     </>
