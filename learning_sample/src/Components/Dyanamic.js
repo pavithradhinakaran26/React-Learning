@@ -11,3 +11,11 @@ function Dyanamic() {
 }
 
 export default Dyanamic 
+
+
+
+
+
+
+
+

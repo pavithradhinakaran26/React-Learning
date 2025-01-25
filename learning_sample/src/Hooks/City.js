@@ -308,7 +308,7 @@
 //         <button type="submit" className='sumbit'>Register</button>
 //       </form>
 
-      // <Country city={selectedCity}/>
+//       <Country city={selectedCity}/>
 //     </div>
 //   );
 // }

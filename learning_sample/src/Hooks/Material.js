@@ -18,6 +18,7 @@ function Material() {
         setSubmitted(data);
       } catch (error) {
         console.error('Error fetching data:', error);
+        
       }
     };
 
@@ -76,7 +77,7 @@ function Material() {
               <TableCell>{user.city}</TableCell>
               <TableCell>{user.address}</TableCell>
               <TableCell>{user.birthdate}</TableCell>
-              <TableCell>{user.gender}</TableCell>
+              {/* <TableCell>{user.gender}</TableCell> */}
               <TableCell>
                 <Button variant="contained" color="primary" style={{ marginRight: '5px' }} onClick={() => handleEdit(user)}>
                   Edit
@@ -93,7 +94,7 @@ function Material() {
   );
 }
 
-export default Material; 
+export default Material;
 
 
 
