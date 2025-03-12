@@ -1,105 +1,98 @@
-.image-container1{
+/* Container */
+.login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
 }
 
-.image {
+/* Card */
+.login-card {
+  background: #ffffff;
+  padding: 30px;
   width: 400px;
-  height: 478px;
-  object-fit: cover; 
-}
-
-.container1 {
-  width: 400px;
-  height: 400px;
-  padding: 40px;
-  background-color: #f5f5f5;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
-.form-title {
-  text-align: center;
+/* Title */
+.login-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
   margin-bottom: 20px;
 }
 
-.form-group {
+/* Form Groups */
+.login-group {
   margin-bottom: 15px;
-  width: 403px;
-  padding: 4px;
-  
+  text-align: left;
 }
 
-.form-label {
-  font-weight: bold;
+/* Labels */
+.login-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 5px;
   display: block;
 }
 
-.form-input {
-  width: 98%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.submit-btn {
+/* Input Fields */
+.login-input {
   width: 100%;
   padding: 10px;
-  background-color: #4caf50;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.login-input:focus {
+  border-color: #2575fc;
+  outline: none;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+}
+
+/* Submit Button */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background: #2575fc;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.submit-btn:hover {
-  background-color: #45a049;
+.login-button:hover {
+  background: #1e5bbf;
 }
 
-.error-message {
+/* Error Message */
+.login-error {
   color: red;
   font-size: 12px;
+  margin-top: 5px;
 }
 
-.sign {
+/* Register Link */
+.login-footer {
   text-align: center;
   margin-top: 10px;
 }
 
-.sign a {
+.login-footer a {
   color: #007bff;
   text-decoration: none;
 }
 
-.sign a:hover {
+.login-footer a:hover {
   text-decoration: underline;
 }
 
 
- 
-
-
-
-
-
-
-
- 
-  
-   
-
-
-
-
- 
-  
-  
- 
- 
-  
-
-  

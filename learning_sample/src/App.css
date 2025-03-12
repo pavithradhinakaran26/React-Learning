@@ -243,7 +243,7 @@ select {
   font-size: 16px;
   box-sizing: border-box;
 }
-button {
+/* button {
   width: 100%;
   padding: 10px;
   border: none;
@@ -252,11 +252,11 @@ button {
   color: white;
   font-size: 16px;
   cursor: pointer;
-}
-button:hover {
+} */
+/* button:hover {
   background-color: #45a049;
   border-radius: 1px solid;
-}
+} */
 
 
 

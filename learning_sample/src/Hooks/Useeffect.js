@@ -1,21 +1,20 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { useNavigate, Link } from 'react-router-dom';
-import './Useeffect.css';
-import images2 from './images2.jpg';
+import { useNavigate } from 'react-router-dom';
+import './Useeffect.css'; 
 
-function Useeffect() {
+function Useeffect() { 
   const navigate = useNavigate();
 
   const formik = useFormik({
     initialValues: {
-      name: '',
-      password: '',
+      username: '',
+      userpassword: '',
     },
     validationSchema: Yup.object({
-      name: Yup.string().required('Name is required'),
-      password: Yup.string().required('Password is required'),
+      username: Yup.string().required('Username is required'),
+      userpassword: Yup.string().required('Password is required'),
     }),
     onSubmit: async (values) => {
       try {
@@ -23,9 +22,7 @@ function Useeffect() {
           'https://672f26e4229a881691f1fdd9.mockapi.io/Loginforms/form',
           {
             method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(values),
           }
         );
@@ -34,76 +31,63 @@ function Useeffect() {
           throw new Error('Failed to save data');
         }
 
-        navigate('/Register', { state: { submittedData: values } });
+        navigate('/Registerpage', { state: { submittedData: values } }); 
       } catch (error) {
         console.error('Error saving data:', error);
       }
     },
   });
 
-
- 
-  const Register = () => {
-    navigate('/Register');
-  };
-
   return (
-    <div className="image-container1">
-      <img src={images2} alt="System" className="image" />
-      <div className="container1">
-        <h1 className="form-title">Login Form</h1>
-        <form onSubmit={formik.handleSubmit}>
-          <div className="form-group">
-            <label className="form-label">Name:</label>
+    <div className="login-container">
+      <div className="login-card"> 
+        <h1 className="login-title">Login</h1> 
+        <form onSubmit={formik.handleSubmit} className="login-form">
+          <div className="login-group">
+            <label className="login-label">Username:</label>
             <input
               type="text"
-              name="name"
-              placeholder="Enter your name"
-              value={formik.values.name}
+              name="username"
+              placeholder="Enter your username"
+              value={formik.values.username}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              className="form-input"
+              className="login-input"
             />
-            {formik.touched.name && formik.errors.name ? (
-              <div className="error-message">{formik.errors.name}</div>
+            {formik.touched.username && formik.errors.username ? (
+              <div className="login-error">{formik.errors.username}</div>
             ) : null}
           </div>
-          <div className="form-group">
-            <label className="form-label">Password:</label>
+          <div className="login-group">
+            <label className="login-label">Password:</label>
             <input
               type="password"
-              name="password"
+              name="userpassword"
               placeholder="Enter your password"
-              value={formik.values.password}
+              value={formik.values.userpassword}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              className="form-input"
+              className="login-input"
             />
-            {formik.touched.password && formik.errors.password ? (
-              <div className="error-message">{formik.errors.password}</div>
+            {formik.touched.userpassword && formik.errors.userpassword ? (
+              <div className="login-error">{formik.errors.userpassword}</div>
             ) : null}
           </div>
-          <button type="submit" className="submit-btn">
+          <button type="submit" className="login-button">
             Login
           </button>
-          <div className="sign">
-            <p>
-              Don’t have an account?{' '}
-              <button
-                type="button"
-                className="register-link"
-                onClick={Register}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  color: 'blue',
-                  textDecoration: 'underline',
-                  cursor: 'pointer',
-                }}
-              >
-                Register here
-              </button>
-            </p>
+          <div className="login-footer">
+          <p>
+        Don’t have an account?{' '}
+     <span 
+      className="login-register" 
+    onClick={() => navigate('/Registerpage')}
+    style={{ cursor: 'pointer', color: '#007bff', textDecoration: 'underline' }}
+  >
+    Register here
+  </span>
+</p>
+
           </div>
         </form>
       </div>
@@ -112,11 +96,3 @@ function Useeffect() {
 }
 
 export default Useeffect;
-
-
-
-
-
-
-
-

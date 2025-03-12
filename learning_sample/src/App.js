@@ -43,6 +43,8 @@ import Country from './Hooks/Country';
 import State from './Hooks/State';
 import Registerforms from './Hooks/Registerforms';
 import Citycontext from './Hooks/Citycontext';
+import Registerpage from './Hooks/Registerpage';
+import Tablec from './Hooks/Tablec';
 
 
 
@@ -95,7 +97,8 @@ function App() {
         <Route path='/state' element={<State/>}></Route>
         <Route path='/registerforms' element={<Registerforms/>}></Route>
         <Route path='/citycontext' element={<Citycontext/>}></Route>
-        
+        <Route path='/Registerpage' element={<Registerpage/>}></Route>
+        <Route path='/tablec' element={<Tablec/>}></Route>
 </Routes>
     </BrowserRouter>
     </>
