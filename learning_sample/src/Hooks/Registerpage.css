@@ -1,4 +1,4 @@
-/* Container */
+
 .register-container {
     display: flex;
     justify-content: center;
@@ -7,7 +7,7 @@
     background: linear-gradient(135deg, #007bff, #6610f2);
 }
 
-/* Card */
+
 .register-card {
     background: #fff;
     padding: 30px;
@@ -17,7 +17,6 @@
     text-align: center;
 }
 
-/* Title */
 .register-title {
     font-size: 22px;
     font-weight: bold;
@@ -26,14 +25,14 @@
    
 }
 
-/* Form Groups */
+
 .form-group {
     margin-bottom: 15px;
     text-align: left;
     width: 80%;
 }
 
-/* Labels */
+
 .form-label {
     font-size: 14px;
     font-weight: 600;
@@ -51,7 +50,6 @@
     margin-right: 354px;
 }
 
-/* Input Fields */
 .form-input {
     width: 80%;
     padding: 10px;
@@ -59,6 +57,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     transition: all 0.3s ease;
+    
 }
 
 .form-input:focus {
@@ -67,7 +66,7 @@
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-/* Dropdown Container (Stacked) */
+
 .dropdown-container {
     display: flex;
     flex-direction: column;
@@ -75,7 +74,7 @@
     margin-top: 15px;
 }
 
-/* Dropdowns */
+
 .form-dropdown {
     width: 80%;
     padding: 10px;
@@ -83,7 +82,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     transition: all 0.3s ease;
-    margin-right: 60px;
+    margin-right: 43px;
 }
 
 .form-dropdown:focus {
@@ -92,7 +91,7 @@
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-/* Submit Button */
+
 .register-button {
     width: 100%;
     padding: 12px;
@@ -110,7 +109,26 @@
     background: #0056b3;
 }
 
-/* Responsive */
+
+  
+  .password-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+  }
+  
+ 
+  
+  .password-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: gray;
+  }
+  
+
 @media (max-width: 480px) {
     .register-card {
         width: 90%;

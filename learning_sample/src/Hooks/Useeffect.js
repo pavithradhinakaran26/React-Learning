@@ -4,17 +4,17 @@ import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import './Useeffect.css'; 
 
-function Useeffect() { 
+function Useeffect() {  
   const navigate = useNavigate();
 
   const formik = useFormik({
     initialValues: {
-      username: '',
-      userpassword: '',
+      Username: '',
+      Userpassword: '',
     },
     validationSchema: Yup.object({
-      username: Yup.string().required('Username is required'),
-      userpassword: Yup.string().required('Password is required'),
+      Username: Yup.string().required('Username is required'),
+      Userpassword: Yup.string().required('Password is required'),
     }),
     onSubmit: async (values) => {
       try {
@@ -45,32 +45,25 @@ function Useeffect() {
         <form onSubmit={formik.handleSubmit} className="login-form">
           <div className="login-group">
             <label className="login-label">Username:</label>
-            <input
-              type="text"
-              name="username"
-              placeholder="Enter your username"
-              value={formik.values.username}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              className="login-input"
+            <input type="text" name="Username" placeholder="Enter your username" value={formik.values.Username} onChange={formik.handleChange} onBlur={formik.handleBlur} className="login-input"
             />
-            {formik.touched.username && formik.errors.username ? (
-              <div className="login-error">{formik.errors.username}</div>
+            {formik.touched.Username && formik.errors.Username ? (
+              <div className="login-error">{formik.errors.Username}</div>
             ) : null}
           </div>
           <div className="login-group">
             <label className="login-label">Password:</label>
             <input
               type="password"
-              name="userpassword"
+              name="Userpassword"
               placeholder="Enter your password"
-              value={formik.values.userpassword}
+              value={formik.values.Userpassword}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               className="login-input"
             />
-            {formik.touched.userpassword && formik.errors.userpassword ? (
-              <div className="login-error">{formik.errors.userpassword}</div>
+            {formik.touched.Userpassword && formik.errors.Userpassword ? (
+              <div className="login-error">{formik.errors.Userpassword}</div>
             ) : null}
           </div>
           <button type="submit" className="login-button">
@@ -82,16 +75,16 @@ function Useeffect() {
      <span 
       className="login-register" 
     onClick={() => navigate('/Registerpage')}
-    style={{ cursor: 'pointer', color: '#007bff', textDecoration: 'underline' }}
+    style={{ cursor: 'pointer', color: '#007bff',  }}
   >
     Register here
   </span>
-</p>
+       </p>
 
-          </div>
-        </form>
-      </div>
-    </div>
+        </div>
+     </form>
+   </div>
+</div>
   );
 }
 

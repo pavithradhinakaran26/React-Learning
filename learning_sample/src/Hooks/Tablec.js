@@ -58,7 +58,7 @@ function Tablec() {
           )}
         </tbody>
       </table>
-      <button className="back-button" onClick={() => navigate('/registerpage')}>Back to Register</button>
+      <button className="back-button" onClick={() => navigate('/Registerpage')}>Back to Register</button>
     </div>
   );
 }
