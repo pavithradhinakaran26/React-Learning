@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
@@ -6,6 +6,7 @@ import './Useeffect.css';
 
 function Useeffect() {  
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false); 
 
   const formik = useFormik({
     initialValues: {
@@ -27,13 +28,13 @@ function Useeffect() {
           }
         );
 
-        if (!response.ok) {
-          throw new Error('Failed to save data');
+        if (!checkResponse.ok) {
+          throw new Error(`User check failed: ${checkResponse.status}`);
         }
 
         navigate('/Registerpage', { state: { submittedData: values } }); 
       } catch (error) {
-        console.error('Error saving data:', error);
+        console.error('Error:', error);
       }
     },
   });

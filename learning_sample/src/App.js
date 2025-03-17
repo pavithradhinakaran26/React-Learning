@@ -37,14 +37,12 @@ import Container from './Components/Container';
 import Usecontext from './Components/Usecontext';
 import UseRef from './Components/UseRef';
 import Reducer from './Components/Reducer';
-import City from './Hooks/City';
+// import City from './Hooks/City';
 import Country from './Hooks/Country';
 
 import State from './Hooks/State';
 import Registerforms from './Hooks/Registerforms';
 import Citycontext from './Hooks/Citycontext';
-import Registerpage from './Hooks/Registerpage';
-import Tablec from './Hooks/Tablec';
 
 
 
@@ -81,7 +79,9 @@ function App() {
       <Route path='/login2' element={<Login2/>}></Route>
       <Route path='/useeffect' element={<Useeffect/>}></Route> 
       <Route path='/context' element={<Context/>}></Route>
-      <Route path='/register' element={<Register/>}></Route>
+      {/* <Route path='/register' element={<Register/>}></Route> */}
+      <Route path="/Register/:id?" element={<Register />} />
+
       <Route path='/data' element={<Data/>}></Route>
       <Route path='/reg' element={<Reg/>}></Route>
       <Route path='/Formik' element={<Formik/>}></Route>
@@ -91,14 +91,12 @@ function App() {
         <Route path='/usecontext' element={<Usecontext/>}></Route>
         <Route path='/useref' element={<UseRef/>}></Route>
         <Route path='/reducer' element={<Reducer/>}></Route>
-        <Route path='/city' element={<City/>}></Route>
+        {/* <Route path='/city' element={<City/>}></Route> */}
         <Route path='/country' element={<Country/>}></Route>
-        
         <Route path='/state' element={<State/>}></Route>
         <Route path='/registerforms' element={<Registerforms/>}></Route>
         <Route path='/citycontext' element={<Citycontext/>}></Route>
-        <Route path='/Registerpage' element={<Registerpage/>}></Route>
-        <Route path='/tablec' element={<Tablec/>}></Route>
+        
 </Routes>
     </BrowserRouter>
     </>

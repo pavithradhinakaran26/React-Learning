@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 import React, { useEffect } from 'react';
 import './Register.css';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -60,7 +52,7 @@ function Register() {
         const data = await response.json();
         console.log('Success:', data);
         alert(userToEdit ? 'User updated successfully!' : 'Registration successful!');
-        navigate('/Material');
+        navigate('/Tablec');
       } catch (error) {
         console.error('Error:', error);
         alert('Registration failed. Please try again.');
@@ -76,30 +68,14 @@ function Register() {
           <div className="input-row">
             <div className="form-name">
               <label htmlFor="username">Username:</label>
-              <input
-                type="text"
-                id="username"
-                name="username"
-                placeholder="Enter your username"
-                value={formik.values.username}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
+              <input type="text" id="username" name="username" placeholder="Enter your username" value={formik.values.username} onChange={formik.handleChange}onBlur={formik.handleBlur}/>
               {formik.touched.username && formik.errors.username && (
                 <p className="error">{formik.errors.username}</p>
               )}
             </div>
             <div className="form-name">
               <label htmlFor="email">Email:</label> 
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                value={formik.values.email}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
+              <input type="email" id="email" name="email" placeholder="Enter your email" value={formik.values.email} onChange={formik.handleChange}onBlur={formik.handleBlur}/>
               {formik.touched.email && formik.errors.email && (
                 <p className="error">{formik.errors.email}</p>
               )}
@@ -109,30 +85,14 @@ function Register() {
           <div className="input-row">
             <div className="form-name">
               <label htmlFor="phone">Phone Number:</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Enter your phone number"
-                value={formik.values.phone}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
+              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" value={formik.values.phone} onChange={formik.handleChange} onBlur={formik.handleBlur}/>
               {formik.touched.phone && formik.errors.phone && (
                 <p className="error">{formik.errors.phone}</p>
               )}
             </div>
             <div className="form-name">
               <label htmlFor="password">Password:</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Enter your password"
-                value={formik.values.password}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
+              <input type="password" id="password" name="password" placeholder="Enter your password" value={formik.values.password} onChange={formik.handleChange}onBlur={formik.handleBlur}/>
               {formik.touched.password && formik.errors.password && (
                 <p className="error">{formik.errors.password}</p>
               )}
@@ -142,32 +102,16 @@ function Register() {
           <div className="input-row">
             <div className="form-name">
               <label htmlFor="address">Address:</label>
-              <input
-                type="text"
-                id="address"
-                name="address"
-                placeholder="Enter your address"
-                value={formik.values.address}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
+              <input type="text" id="address" name="address" placeholder="Enter your address" value={formik.values.address} onChange={formik.handleChange}onBlur={formik.handleBlur}/>
               {formik.touched.address && formik.errors.address && (
                 <p className="error">{formik.errors.address}</p>
               )}
             </div>
             <div className="form-name">
               <label htmlFor="city">City:</label>
-              <input
-                type="text"
-                id="city"
-                name="city"
-                placeholder="Enter your city"
-                value={formik.values.city}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
+              <input type="text"id="city" name="city" placeholder="Enter your city" value={formik.values.city} onChange={formik.handleChange} onBlur={formik.handleBlur}/>
               {formik.touched.city && formik.errors.city && (
-                <p className="error">{formik.errors.city}</p>  
+                <p className="error">{formik.errors.city}</p>
               )}
             </div>
           </div>
@@ -193,14 +137,7 @@ function Register() {
 
             <div className="form-error">
               <label htmlFor="birthdate" className="list">Date of Birth:</label>
-              <input
-                type="date"
-                id="birthdate"
-                name="birthdate"
-                value={formik.values.birthdate}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
+              <input type="date" id="birthdate" name="birthdate" value={formik.values.birthdate}onChange={formik.handleChange} onBlur={formik.handleBlur}/>
               {formik.touched.birthdate && formik.errors.birthdate && (
                 <p className="error">{formik.errors.birthdate}</p>
               )}
@@ -208,7 +145,7 @@ function Register() {
           </div>
 
           <div className="submit-btn">
-            <button type="submit">{userToEdit ? 'Update' : 'Register'}</button>
+            <button type="submit">{userToEdit ? 'Update' :'Register'}</button>
           </div>
 
           <p>Already have an account?<a href="#" onClick={() => navigate('/Useeffect')}>Sign in</a>.</p>
@@ -219,30 +156,3 @@ function Register() {
 }
 
 export default Register;
-
-
-
-
-
-
-
-
-
-
-
-
-             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
