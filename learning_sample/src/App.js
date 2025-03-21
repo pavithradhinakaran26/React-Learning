@@ -10,7 +10,7 @@ import './App.css';
 // 
 // 
 // 
-import Login from '../src/Components/login';
+
 import Form from '../src/Components/Form';
 import Loginpage from '../src/Components/Loginpage';
 import Handling from './Components/Handling';
@@ -24,7 +24,7 @@ import About from './Components/About';
 import Mainmemo from './Components/Mainmemo';
 import Props from './Components/Props';
 import Login2 from './Hooks/Login2';
-import Useeffect from './Hooks/Useeffect';
+
 
 import Register from './Hooks/Register';
 import Data from './Hooks/Data';
@@ -43,15 +43,8 @@ import Country from './Hooks/Country';
 import State from './Hooks/State';
 import Registerforms from './Hooks/Registerforms';
 import Citycontext from './Hooks/Citycontext';
-
-
-
-
-
-
-
-
-
+import Tablec from './Hooks/Tablec';
+import Login from './Hooks/Login';
 
 
 
@@ -63,7 +56,7 @@ function App() {
     {/* <Rounter/> */}
     <Routes>
       
-      <Route path='/login' element={<Login/>}></Route> 
+      
       <Route path='/form' element={<Form/>}></Route>
       <Route path='/loginpage' element={<Loginpage/>}></Route>
       <Route path='/handling' element={<Handling/>}></Route>
@@ -77,7 +70,7 @@ function App() {
       <Route path='/mainmemo' element={<Mainmemo/>}></Route>
       <Route path='/props' element={<Props/>}></Route>
       <Route path='/login2' element={<Login2/>}></Route>
-      <Route path='/useeffect' element={<Useeffect/>}></Route> 
+     
       <Route path='/context' element={<Context/>}></Route>
       {/* <Route path='/register' element={<Register/>}></Route> */}
       <Route path="/Register/:id?" element={<Register />} />
@@ -96,6 +89,8 @@ function App() {
         <Route path='/state' element={<State/>}></Route>
         <Route path='/registerforms' element={<Registerforms/>}></Route>
         <Route path='/citycontext' element={<Citycontext/>}></Route>
+        <Route path='/tablec' element={<Tablec/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
         
 </Routes>
     </BrowserRouter>
