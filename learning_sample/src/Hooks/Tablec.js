@@ -11,20 +11,44 @@ function Tablec() {
   const [showModal, setShowModal] = useState(false);
   const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' });
   const [searchTerm, setSearchTerm] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true); 
+  const [editing, setEditing] = useState(false);
+
   
-  const navigate = useNavigate();
   useEffect(() => {
+    setLoading(true);
     fetch('https://672f26e4229a881691f1fdd9.mockapi.io/Loginforms/Register')
       .then((response) => response.json())
-      .then((data) => setUsers(data))
-      .catch((error) => console.error('Error fetching data:', error));
+      .then((data) => {
+        setUsers(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+        toast.error('Error fetching data.');
+        setLoading(false);
+      });
   }, []);
 
-  const handleEdit = (user) => {
-    setEditingUser(user);
-    setShowModal(true);
-  };
+
+
+    
+  useEffect(() => {
+    setEditing(false);
+    fetch('https://672f26e4229a881691f1fdd9.mockapi.io/Loginforms/Register')
+      .then((response) => response.json())
+      .then((data) => {
+        setUsers(data);
+        setEditing(false);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+        toast.error('Error fetching data.');
+        setEditing(false);
+      });
+  }, []);
+
+  
 
   const handleSave = async () => {
     setLoading(true);
@@ -49,23 +73,6 @@ function Tablec() {
     setEditingUser({ ...editingUser, [e.target.name]: e.target.value });
   };
 
-  const handleDelete = async (id) => {
-    try {
-      await fetch(`https://672f26e4229a881691f1fdd9.mockapi.io/Loginforms/Register/${id}`, {
-        method: 'DELETE',
-      });
-      setUsers(users.filter(user => user.id !== id));
-      toast.success('User deleted successfully!');
-    } catch (error) {
-      console.error('Error deleting user:', error);
-      toast.error('Failed to delete user.');
-    }
-  };
-
-  const handleLogout = () => {
-    navigate('/Login');
-  };
-
   const handleSort = (key) => {
     let direction = 'asc';
     if (sortConfig.key === key && sortConfig.direction === 'asc') {
@@ -88,13 +95,26 @@ function Tablec() {
     }
     return '';
   };
+  const handleEdit = (user) => {
+    setLoading(true); 
+    setTimeout(() => {
+      setEditingUser(user);
+      setShowModal(true);
+      setLoading(false); 
+    }, 1000);
+  };
+  
 
+  
   const filteredUsers = users.filter(user =>
     user.username.toLowerCase().includes(searchTerm.toLowerCase()) ||
     user.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    user.phone.includes(searchTerm)
+    user.phone.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    user.city.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    user.gender.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    user.address.toLowerCase().includes(searchTerm.toLowerCase())
   );
-  
+
   return (
     <div>
       <Navbar /> 
@@ -102,7 +122,6 @@ function Tablec() {
         <ToastContainer />
         <div className="header">
           <h2>Registered Users</h2>
-          <button className="logout-btn" onClick={handleLogout}>Logout</button>
         </div>
         
         <div className="search-bar">
@@ -114,10 +133,18 @@ function Tablec() {
             className="search-input"
           />
         </div>
+
+       
         
-        {filteredUsers.length === 0 ? (
-          <p className="no-users">No users found.</p>
+
+        {loading ? (
+          <div className="loading-container">
+            <div className="loading-spinner"></div>
+            <p className="loading-text">Loading users...</p>
+          </div>
+          
         ) : (
+          
           <div className="table-wrapper">
             <table className="user-table">
               <thead>
@@ -144,8 +171,10 @@ function Tablec() {
                     <td>{user.address}</td>
                     <td>
                       <div className="action-buttons">
-                        <button className="edit-btn" onClick={() => handleEdit(user)}>Edit</button>
-                        <button className="delete-btn" onClick={() => handleDelete(user.id)}>Delete</button>
+                        <button className="edit-btn" onClick={() => handleEdit(user)}>
+                          {editing ? 'Editing...' : 'Edit'}
+                        </button>
+                        <button className="delete-btn">Delete</button>
                       </div>
                     </td>
                   </tr>
@@ -159,18 +188,20 @@ function Tablec() {
           <div className="modal-overlay">
             <div className="modal">
               <h3>Edit User</h3>
-              <label>Name:</label>
-              <input type="text" name="username" value={editingUser.username} onChange={handleChange} placeholder="Username" />
-              <label>Email:</label>
-              <input type="email" name="email" value={editingUser.email} onChange={handleChange} placeholder="Email" />
-              <label>Phone no:</label>
-              <input type="text" name="phone" value={editingUser.phone} onChange={handleChange} placeholder="Phone" />
-              <label>City:</label>
-              <input type="text" name="city" value={editingUser.city} onChange={handleChange} placeholder="City" />
-              <label>Gender:</label>
-              <input type="text" name="gender" value={editingUser.gender} onChange={handleChange} placeholder="Gender" />
-              <label>Address:</label>
-              <input type="text" name="address" value={editingUser.address} onChange={handleChange} placeholder="Address" />
+              <div className='text'>
+                <label>Name:</label>
+                <input type="text" name="username" value={editingUser.username} onChange={handleChange} placeholder="Username" />
+                <label>Email:</label>
+                <input type="email" name="email" value={editingUser.email} onChange={handleChange} placeholder="Email" />
+                <label>Phone no:</label>
+                <input type="text" name="phone" value={editingUser.phone} onChange={handleChange} placeholder="Phone" />
+                <label>City:</label>
+                <input type="text" name="city" value={editingUser.city} onChange={handleChange} placeholder="City" />
+                <label>Gender:</label>
+                <input type="text" name="gender" value={editingUser.gender} onChange={handleChange} placeholder="Gender" />
+                <label>Address:</label>
+                <input type="text" name="address" value={editingUser.address} onChange={handleChange} placeholder="Address" />
+              </div>
               <div className="modal-buttons">
                 <button className="save-btn" onClick={handleSave} disabled={loading}>{loading ? 'Updating...' : 'Update'}</button>
                 <button className="cancel-btn" onClick={() => setShowModal(false)}>Cancel</button>
